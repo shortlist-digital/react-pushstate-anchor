@@ -14,7 +14,7 @@ Wrap your entire application or just the part of the application you want to use
 
 A replacement for `<a>` tags that will use `history.pushState` under the hood.
 
-```
+```js
 import { PushStateAnchor as A } from 'react-pushstate-anchor'
 <A href='/home'>Home</A>
 ```
@@ -24,7 +24,7 @@ import { PushStateAnchor as A } from 'react-pushstate-anchor'
 If you're updating history, you'll probably want to know when it's been updated. Use `PushStateLocation` component to get the current history location object, it'll update whenever a `PushStateAnchor` is clicked.
 A utitlity component that will provide the current history location using a render callback.
 
-```
+```js
 import { PushStateLocaation } from 'react-pushstate-anchor'
 
 <PushStateLocation>
