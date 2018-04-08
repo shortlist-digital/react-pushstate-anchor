@@ -37,10 +37,6 @@ Install from NPM:
 
 `yarn add react-pushstate-anchor`
 
-React PushState Anchor is written entirely in ES6 with React 16.3's context API. 
-
-We assume you're using Webpack or Rollup as you're using React, so we do no bundling whatsover
-
 ## Usage
 
 ```js
