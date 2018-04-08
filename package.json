@@ -1,7 +1,7 @@
 {
   "name": "react-pushstate-anchor",
   "version": "0.1.0",
-  ":main": "index.js",
+  "main": "index.js",
   "devDependencies": {
     "react-scripts": "1.1.4",
     "babel-cli": "^6.26.0",
@@ -28,17 +28,23 @@
     "rollup-plugin-replace": "^2.0.0",
     "rollup-plugin-uglify": "^3.0.0"
   },
+  "files": [
+    "index.js",
+    "umd",
+    "es"
+  ],
   "dependencies": {
     "history": "^4.7.2"
   },
   "peerDependencies": {
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1"
+    "react": ">=16.3.1",
+    "react-dom": ">=16.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepublishOnly": "node ./tools/build.js"
   }
 }
