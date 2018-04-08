@@ -33,9 +33,9 @@ import { PushStateLocaation } from 'react-pushstate-anchor'
 
 ## Installation
 
-Install from NPM:
+Install from NPM, `react-pushstate-anchor` requires the `history` module as a peer dependency.
 
-`yarn add react-pushstate-anchor`
+`yarn add react-pushstate-anchor history`
 
 ## Usage
 
