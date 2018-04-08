@@ -4,6 +4,8 @@
 
 React PushState Anchor provides three components for performing client-side push state navigation. There's no routing or complex state management. Just three components
 
+![](https://i.imgur.com/e0DcnDS.gif)
+
 ### `<PushStateAnchorProvider />`
 
 Wrap your entire application or just the part of the application you want to use pushState in.
@@ -19,6 +21,7 @@ import { PushStateAnchor as A } from 'react-pushstate-anchor'
 
 ### `PushStateLocation />`
 
+If you're updating history, you'll probably want to know when it's been updated. Use `PushStateLocation` component to get the current history location object, it'll update whenever a `PushStateAnchor` is clicked.
 A utitlity component that will provide the current history location using a render callback.
 
 ```
