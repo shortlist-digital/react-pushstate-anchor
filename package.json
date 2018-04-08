@@ -1,0 +1,22 @@
+{
+  "name": "react-pushstate-anchor",
+  "version": "0.1.0",
+  ":main": "./src/lib/index.js",
+  "jsnext:main": "./src/lib/index.js",
+  "devDependencies": {
+    "react-scripts": "1.1.4"
+  },
+  "dependencies": {
+    "history": "^4.7.2"
+  },
+  "peerDependencies": {
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
