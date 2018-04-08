@@ -1,20 +1,18 @@
 import React, { Component } from 'react'
 import createHistory from 'history/createBrowserHistory'
 
-const { Provider, Consumer} = React.createContext('push-state-anchor')
+const { Provider, Consumer } = React.createContext('push-state-anchor')
 
 class PushStateAnchorProvider extends Component {
   constructor() {
     super()
     this.state = {
-      location: window.location,
-      action: null
+      location: window.location
     }
     this.history = createHistory()
-    this.history.listen((location, action) => {
+    this.history.listen(location => {
       this.setState({
-        location,
-        action
+        location
       })
     })
   }
@@ -46,9 +44,7 @@ const PushStateAnchor = (props) =>
 
 const PushStateLocation = (props) =>
   <Consumer>
-    {value => (
-      props.children({location: value.location, action: value.action})
-    )}
+    {value => props.children(value.location)}
   </Consumer>
 
 export {

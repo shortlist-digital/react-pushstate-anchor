@@ -10,7 +10,7 @@ class App extends Component {
         <Psa href='/about'><button>About</button></Psa>
         <Psa href='/careers'><button>Careers</button></Psa>
         <PushStateLocation>
-          {({location}) => (
+          {location => (
             <h1>{location.pathname}</h1>
           )}
         </PushStateLocation>
