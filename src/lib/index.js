@@ -6,9 +6,13 @@ const { Provider, Consumer } = React.createContext('push-state-anchor')
 class PushStateAnchorProvider extends Component {
   constructor() {
     super()
-    this.state = { location: window.location }
+    this.state = { location: null }
     this.history = createHistory()
     this.history.listen(location => this.setState({location}))
+  }
+
+  componentDidMount() {
+    this.setState({location: window.location})
   }
 
   render() {
@@ -60,7 +64,7 @@ class PushStateAnchor extends Component {
 
 const PushStateLocation = (props) =>
   <Consumer>
-    {value => props.children(value.location)}
+    {value => value.location && props.children(value.location)}
   </Consumer>
 
 export {
