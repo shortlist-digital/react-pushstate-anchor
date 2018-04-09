@@ -1,6 +1,6 @@
 {
   "name": "react-pushstate-anchor",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": "index.js",
   "module": "es/index.js",
   "devDependencies": {
@@ -41,10 +41,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "node ./tools/build.js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "build": "node ./tools/build.js",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {}
