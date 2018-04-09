@@ -44,7 +44,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "prepublishOnly": "node ./tools/build.js"
+    "build": "node ./tools/build.js",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {}
 }
