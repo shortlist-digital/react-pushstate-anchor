@@ -4,7 +4,6 @@
   "main": "index.js",
   "module": "es/index.js",
   "devDependencies": {
-    "react-scripts": "1.1.4",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.1",
     "babel-jest": "^22.1.0",
@@ -22,6 +21,7 @@
     "jest": "^22.1.4",
     "pretty-bytes": "^4.0.2",
     "raf": "^3.4.0",
+    "react-scripts": "1.1.4",
     "rollup": "^0.50.1",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-commonjs": "^8.2.6",
@@ -35,9 +35,9 @@
     "es"
   ],
   "peerDependencies": {
-    "react": ">=16.3.1",
-    "react-dom": ">=16.3.1",
-    "history": "^4.7.2"
+    "history": "^4.7.2",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -45,5 +45,6 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "prepublishOnly": "node ./tools/build.js"
-  }
+  },
+  "dependencies": {}
 }

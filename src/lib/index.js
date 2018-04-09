@@ -21,20 +21,42 @@ class PushStateAnchorProvider extends Component {
   }
 }
 
-const PushStateAnchor = (props) =>
-  <Consumer>
-    {value => (
-      <a
-        href={props.href}
-        onClick={event => {
-          event.preventDefault()
-          value.history.push(props.href)
-        }}
-      >
-        {props.children}
-      </a>
-    )}
-  </Consumer>
+class PushStateAnchor extends Component {
+  constructor() {
+    super()
+    this.state = {
+      clientReady: false
+    }
+    this.interceptOnClick = this.interceptOnClick.bind(this)
+  }
+
+  componentDidMount() {
+    this.setState({clientReady: true})
+  }
+
+  interceptOnClick(event, value) {
+    event.preventDefault()
+    value.history.push(this.props.href)
+  }
+
+  render() { 
+    const props = this.props
+    return (
+      <Consumer>
+        {value => (
+          <a
+            onClick={(event) => {
+              this.state.clientReady ? this.interceptOnClick(event, value) : props.onClick(event)
+            }}
+            {...props}
+          >
+            {props.children}
+          </a>
+        )}
+      </Consumer>
+    )
+  }
+}
 
 const PushStateLocation = (props) =>
   <Consumer>
