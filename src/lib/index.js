@@ -40,17 +40,17 @@ class PushStateAnchor extends Component {
   }
 
   render() { 
-    const props = this.props
+    const { onClick, ...otherProps } = this.props
     return (
       <Consumer>
         {value => (
           <a
             onClick={(event) => {
-              this.state.clientReady ? this.interceptOnClick(event, value) : props.onClick(event)
+              this.state.clientReady ? this.interceptOnClick(event, value) : onClick(event)
             }}
-            {...props}
+            {...otherProps}
           >
-            {props.children}
+            {otherProps.children}
           </a>
         )}
       </Consumer>
