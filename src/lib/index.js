@@ -70,7 +70,7 @@ class PushStateAnchor extends Component {
 
 const PushStateLocation = (props) =>
   <Consumer>
-    {value => value.location && props.children(value.location)}
+    {value => value.location && props.children(value.location, value.hiistory)}
   </Consumer>
 
 export {
